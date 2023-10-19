@@ -1,0 +1,368 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/*BANNER*/
+header {
+    background: rgb(255, 117, 32);
+    background-image: url(imagenes/vegetales.png);
+    height: 4em;
+    line-height: 4em;
+    text-align: center;
+    color: white;
+}
+
+#logo{
+    width: 120px;
+    height: 70px;
+    background-image: url('imagenes/cult.png');
+    text-indent: -900px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block;
+    
+}
+
+#barra {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 4em;
+    background: rgb(255, 117, 32);
+    transition: height .5s ease;
+}
+
+#barra li {
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    margin: 1em;
+    width: 90%;
+    display: inline-block;
+}
+
+#barra li a {
+    text-decoration: none;
+    display: block;
+    background: rgba(95, 226, 7, 0.815);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 2em;
+}
+
+/*MAIN*/
+section {
+    width: 100%;
+    padding: 1em;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1em;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.4em;
+
+}
+
+.foto {
+    text-align: center;
+}
+.fotoimg {
+    width: 100%;
+
+}
+
+/*4 PASTILLAS DE INFO*/
+#informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Imagenes/vegetales.png);
+    padding: 20px;
+}
+
+.pastilla {
+    text-align: center;
+    cursor: pointer;
+    width: 70%;
+    padding: 20px;
+    background-color: rgb(176, 240, 48); 
+    border-radius: 5px;
+}
+
+.pastilla img {
+    width: 100%;
+    display: block;
+    margin: 0 auto; 
+}
+
+.pastilla p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.pastilla:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 4px rgba(29, 80, 1, 0.952); 
+}
+
+/*VIDEO*/
+.huerta {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: auto;
+    background: rgb(255, 141, 11);
+}
+
+.vid {
+    background: rgb(255, 255, 255);
+    font-size: 0;
+    text-align: center;
+}
+
+video {            
+    max-width:  100%;          
+    border: 10px solid rgb(255, 141, 11);
+    text-align: center;
+}
+
+/*GALERIA DE IMAGENES*/
+.slider-cont {
+    position: relative; 
+    max-width: 100%;
+    margin: 0 auto
+    
+    }
+    
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 5rem;
+    }
+    
+.slider img {
+    flex: 1 0 100%; 
+    scroll-snap-align: start;
+    object-fit: cover
+    }
+    
+
+/*FOOTER*/
+footer {
+    color: white;
+    background-color: #ff7e28;
+    text-align: center;
+    background-image: url(imagenes/vegetales.png);
+}
+
+footer div , footer ul , footer ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul {
+    width: 5.6em;
+    text-align: left;
+}
+
+/* Estilos para tablet. */
+@media screen and (max-width: 991px) {
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #hamburguesa li {
+        list-style: none;
+        text-indent: -100px;
+        overflow: hidden;
+        margin-top: .75em;
+        width: 2.5em;
+    }
+
+    #hamburguesa li a {
+        background: url("imagenes/menu.png") no-repeat center center;
+        background-size: cover;
+        display: block;
+        height: 2.5em;
+    }
+
+    #hamburguesa li:last-child {
+        display: none;
+    }
+
+    nav:target #barra {
+        height: calc(100vh - 4em);
+    }
+
+    nav:target #hamburguesa li:first-child {
+        display: none;
+    }
+
+    nav:target #hamburguesa li:last-child {
+        display: block;
+    }
+    
+}
+
+
+
+/* Estilos para pc. */
+@media screen and (min-width: 992px) {
+
+    #hamburguesa {
+        display: none;
+    }
+
+    header {
+        height: auto;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    section {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #menu {
+        display: inline-block;
+        width: 70%;
+        vertical-align: middle;
+    }
+
+    #barra {
+        position: static;
+        height: auto;
+        text-align: right;
+        background: none;
+    }
+
+    #barra li {
+        width: 87px;
+        margin: 0 1em;
+        text-align: center;
+    }
+
+    .fotoimg{
+        width: 100%;
+    }
+
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    h2 {
+        flex: 1 1050px;
+    }
+
+    p {
+        flex: 1 450px;
+        margin: 0;
+    }
+
+    
+        /*4 PASTILLAS DE INFO*/
+    #informacion {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        background-image: url(Imagenes/vegetales.png);
+        padding: 20px; 
+    }
+    
+    .pastilla {
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+        width: 200px;
+        padding: 20px;
+        background-color:  rgb(176, 240, 48); 
+        border-radius: 5px; 
+    }
+    
+    .pastilla img {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto; 
+    }
+    
+    .pastilla p {
+
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    
+    .pastilla:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 2px 4px rgba(29, 80, 1, 0.952); 
+    }
+
+
+    .slider-cont {
+    position: relative; 
+    max-width: 90%;
+    margin: 0 auto
+    
+    }
+    
+    .slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 5rem;
+    }
+    
+    .slider img {
+    flex: 1 0 100%; 
+    scroll-snap-align: start;
+    object-fit: cover
+    }
+
+    footer {
+        max-width: 1090px;
+        width: 100%;
+        margin-left: 5.8em;
+        background-image: url(Imagenes/vegetales.png);
+    }
+
+    footer ul {
+        margin-left: 30em;
+
+    }
+    
+
+   
+}
+
+
